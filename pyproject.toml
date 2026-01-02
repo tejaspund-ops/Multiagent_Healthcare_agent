@@ -1,0 +1,57 @@
+[project]
+name = "healthcare-chatbot"
+version = "0.1.0"
+description = "Multi-Agent Healthcare Conversational API Chatbot"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    # API
+    "fastapi",
+    "uvicorn[standard]",
+    # LangChain / LangGraph
+    "langchain",
+    "langgraph",
+    # LLM Providers
+    "groq",
+    "google-generativeai",
+    # Embeddings
+    "sentence-transformers",
+    # Vector DB
+    "faiss-cpu",
+    # PDF Processing
+    "pypdf",
+    "pdfplumber",
+    # Auth & Security
+    "python-jose[cryptography]",
+    "passlib[bcrypt]",
+    # Utils
+    "python-dotenv",
+    "pydantic",
+    "httpx",
+    "python-multipart>=0.0.21",
+    "pyjwt>=2.10.1",
+    "google-genai>=1.56.0",
+    "langchain-google-genai>=4.1.2",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0.0",
+    "black",
+    "ruff",
+
+    # LangChain / LangGraph
+    "langchain",
+    "langgraph",
+    "langchain-text-splitters", 
+    "langchain-community",
+    "langchain-groq",
+    "langchain-google-genai",
+
+    # ... other dependencies
+    "pydantic",
+    "pydantic-settings",
+    "python-dotenv",
+
+    ]
